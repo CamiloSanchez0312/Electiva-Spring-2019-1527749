@@ -1,2 +1,3 @@
 # Electiva-Spring-2019-1527749
-Tarea MPI Plataformas a grna escala
+Codigo de estudiante: 1527749
+Tarea MPI Plataformas a gran escala
