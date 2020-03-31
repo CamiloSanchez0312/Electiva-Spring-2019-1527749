@@ -17,9 +17,8 @@ int main(int argc,char *argv[]){
 		}
 	} else{
 		MPI_Recv(&inmsg, 1, MPI_INT, src, tag, MPI_COMM_WORLD, &Stat);
+		printf("Proceso %d recibió un entero del proceso %d\n", rank, Stat.MPI_SOURCE);
 	}
-	
-	printf("Proceso %d recibió un entero del proceso %d\n", rank, Stat.MPI_SOURCE);
 	
 	MPI_Finalize();
 }
