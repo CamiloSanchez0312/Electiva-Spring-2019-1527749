@@ -9,9 +9,9 @@ int main(int argc,char *argv[]){
 	MPI_Init(&argc, &argv);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-	if(rank == 0){
+	if(rank == 0){// Solamente el proceso 0 va a ejecutar el for 
 		for(int i = 0; i < size; i++){
-			if(rank != i){
+			if(rank != i){ 
 				MPI_Send(&outmsg, 1, MPI_INT, i, tag, MPI_COMM_WORLD);
 			}
 		}
